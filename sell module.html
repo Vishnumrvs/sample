@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sell Pet</title>
+    <style>
+        body{
+            /* background-image: url(); */
+            /* background-color: black; */
+            background-image: url(img/hm\ bac\ im0.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+        }
+.container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+               height: 300px;
+                  position: absolute;
+                bottom: 15px;
+                 left: 500px;
+                         transform: translate(0%,-5%);
+                 border-radius: 7px;
+              padding: 25px;
+        }
+        .container input{
+            width: 240px;
+    /* height: 35px; */
+    background: transparent;
+    border-bottom: 1px solid #000000;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+        }
+        .form-group input .form-group textarea {
+            width: 300px;
+            /* padding: 5px; */
+            background-color: transparent;
+            border: none;
+            resize: none;
+            font-size: 14px;
+            color: #000;
+            padding: 5px;
+            /* width: 200px; */
+            /* height: 100px; */
+        }
+        .form-group select {
+            width: 200px;
+            padding: 5px;
+        }
+        .form-group button {
+            width: 100px;
+            padding: 5px;
+            background-color: #4CAF50;
+            color: rgb(197, 33, 33);
+            border: none;
+            cursor: pointer;
+        }
+    .upload .btnn{
+        align:center;
+    width: 100px;
+    height: 30px;
+    background: #4CAF50;
+    border: 2px solid #0a0909;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    }
+    
+    </style>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            var name = document.getElementById('name').value;
+            var species = document.getElementById('species').value;
+            var age = document.getElementById('age').value;
+            var description = document.getElementById('description').value;
+
+            // Create pet object
+            var pet = {
+                name: name,
+                species: species,
+                age: age,
+                description: description
+            };
+        });
+    
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sell Pet</h1>
+        <form>
+            <div class="form-group">
+                <!-- <label for="name">Name:</label> -->
+                <input type="text" id="name" required placeholder="Name">
+            </div>
+            <div class="form-group">
+                <!-- <label for="name">Mobile</label> -->
+                <input type="number" id="name" required minlength="10" max="12" placeholder="Mobile number">
+            </div>
+            <div class="form-group">
+                <!-- <label for="name">Email</label> -->
+                <input type="text" id="name" placeholder="Email">
+            </div><br>
+            <div class="form-group">
+                <label for="species">Species:</label>
+                <select id="species" required>
+                    <option value="dog">Dog</option>
+                    <!-- <option value="cat">Cat</option> -->
+                    <option value="bird">Bird</option>
+                    <!-- <option value="rabbit">Rabbit</option> -->
+                </select>
+            </div>
+            <div class="upload">
+                upload image:<input type="file" placeholder="Pet_image"/>
+                <!-- <input class="btnn" type="submit"> -->
+            </div><br>
+            <div class="form-group">
+                <!-- <label for="age">Age (in years):</label> -->
+                <input type="number" id="age" required placeholder="Age (years)">
+            </div>
+            <div class="form-group"><br>
+                <!-- <label for="description">Description:</label> -->
+                <textarea id="description" rows="10" required placeholder="reason for selling"></textarea>
+            </div>
+            <div class="upload">
+                <button class="btnn" type="submit"><a href=""></a> Sell</button>
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>
